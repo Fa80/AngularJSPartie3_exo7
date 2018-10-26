@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="fr" ng-app="testApp">
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
+        <title>Exercice 7</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+<body>
+<div ng-controller="phonesCtrl">
+  <table cellspacing="2px" cellpadding="2px;" rules="all" style="border:solid 1px black;">
+    <thead>
+      <th>Modèle</th>
+      <th>Marque</th>
+    </thead>
+    <!--ng-repeat est une directive, il boucles  -->
+    <tr ng-repeat="phone in phones | orderBy:'phoneModel'">
+
+      <td>
+        {{phone.phoneModel}}
+      </td>
+      <td>
+        {{phone.brand}}
+      </td>
+    </tr>
+  </table>
+  </div>
+<script src="assets/js/script.js"></script>
+</body>
+</html>
